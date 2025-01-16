@@ -1,172 +1,146 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: "Roboto", sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
-.header {
-  background: linear-gradient(135deg, #6c63ff, #4842b7);
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff0000;
   color: white;
-  padding: 1rem 0;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: bold;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-.nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav a:hover {
-  color: #ffda79;
-}
-
-.hero {
-  text-align: center;
-  padding: 5rem 0;
-  background: url("hero-bg.jpg") no-repeat center/cover;
-  color: white;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #ff6b6b;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #ff4757;
-  transform: scale(1.05);
-}
-
-.genres,
-.popular,
-.contact {
-  padding: 2rem 0;
-}
-
-.genres h2,
-.popular h2,
-.contact h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.genre-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.genre {
-  padding: 1rem 2rem;
-  background-color: #6c63ff;
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s;
   cursor: pointer;
 }
 
-.genre:hover {
-  background-color: #4842b7;
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 20px;
 }
 
-.manga-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: all 0.3s;
 }
 
-.manga {
-  text-align: center;
+.search-bar input:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 8px rgba(255, 153, 0, 0.5);
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #ff9900;
+}
+
+.user-menu button {
   background-color: white;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.user-menu button:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+main {
+  display: flex;
+  margin-top: 20px;
+}
+
+aside {
+  width: 200px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside nav ul li {
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+aside nav ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.videos {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.video {
+  background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
-.manga img {
+.video:hover {
+  transform: scale(1.05);
+}
+
+.video img {
   width: 100%;
-  display: block;
+  height: 180px;
+  object-fit: cover;
 }
 
-.manga h3 {
-  padding: 1rem;
+.video h3 {
+  margin: 10px;
+  font-size: 18px;
 }
 
-.manga:hover {
-  transform: translateY(-10px);
+.video p {
+  margin: 0 10px 10px;
+  color: #666;
+  font-size: 14px;
 }
 
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-input,
-textarea {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  transition: border-color 0.3s;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #6c63ff;
-  outline: none;
-}
-
-button {
-  padding: 0.75rem;
-  font-size: 1rem;
-  background-color: #6c63ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #4842b7;
-}
-
-.footer {
+footer {
   text-align: center;
-  padding: 1rem 0;
+  padding: 10px;
   background-color: #333;
   color: white;
+  margin-top: 20px;
 }

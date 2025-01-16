@@ -7,94 +7,65 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <h1 class="logo">Manga Tur</h1>
-        <nav class="nav">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#genres">Genres</a></li>
-            <li><a href="#popular">Popular</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    <header>
+      <div class="logo">MyTube</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button>🔍</button>
+      </div>
+      <div class="user-menu">
+        <button>Sign In</button>
       </div>
     </header>
 
     <main>
-      <section id="home" class="hero">
-        <div class="container">
-          <h2>Welcome to Manga Tur</h2>
-          <p>Your ultimate destination for manga and comics.</p>
-          <a href="#genres" class="btn">Explore Now</a>
-        </div>
-      </section>
+      <aside>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Trending</li>
+            <li>Subscriptions</li>
+            <li>Library</li>
+          </ul>
+        </nav>
+      </aside>
 
-      <section id="genres" class="genres">
-        <div class="container">
-          <h2>Genres</h2>
-          <div class="genre-list">
-            <div class="genre">Action</div>
-            <div class="genre">Romance</div>
-            <div class="genre">Fantasy</div>
-            <div class="genre">Horror</div>
-            <div class="genre">Comedy</div>
-            <div class="genre">Adventure</div>
-          </div>
+      <section class="videos">
+        <div class="video">
+          <img src="thumbnail1.jpg" alt="Video Thumbnail" />
+          <h3>Video Title 1</h3>
+          <p>Channel Name • 1M views • 1 day ago</p>
         </div>
-      </section>
-
-      <section id="popular" class="popular">
-        <div class="container">
-          <h2>Popular Manga</h2>
-          <div class="manga-grid">
-            <div class="manga">
-              <img src="manga1.jpg" alt="Manga 1" />
-              <h3>Manga Title 1</h3>
-            </div>
-            <div class="manga">
-              <img src="manga2.jpg" alt="Manga 2" />
-              <h3>Manga Title 2</h3>
-            </div>
-            <div class="manga">
-              <img src="manga3.jpg" alt="Manga 3" />
-              <h3>Manga Title 3</h3>
-            </div>
-            <div class="manga">
-              <img src="manga4.jpg" alt="Manga 4" />
-              <h3>Manga Title 4</h3>
-            </div>
-          </div>
+        <div class="video">
+          <img src="thumbnail2.jpg" alt="Video Thumbnail" />
+          <h3>Video Title 2</h3>
+          <p>Channel Name • 500K views • 2 days ago</p>
         </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Contact Us</h2>
-          <form action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-            ></textarea>
-            <button type="submit" class="btn">Send</button>
-          </form>
+        <div class="video">
+          <img src="thumbnail3.jpg" alt="Video Thumbnail" />
+          <h3>Video Title 3</h3>
+          <p>Channel Name • 300K views • 3 days ago</p>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Manga Tur. All rights reserved.</p>
-      </div>
+    <footer>
+      <p>&copy; 2025 MyTube. All rights reserved.</p>
     </footer>
+
+    <script>
+      document.querySelectorAll("aside nav ul li").forEach((item) => {
+        item.addEventListener("click", () => {
+          alert(`Navigating to ${item.textContent}`);
+        });
+      });
+
+      const searchInput = document.querySelector(".search-bar input");
+      const searchButton = document.querySelector(".search-bar button");
+
+      searchButton.addEventListener("click", () => {
+        alert(`Searching for: ${searchInput.value}`);
+      });
+    </script>
   </body>
 </html>
