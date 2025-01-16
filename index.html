@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
- <h1>salom</h1>   
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">Manga Tur</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#genres">Genres</a></li>
+            <li><a href="#popular">Popular</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <h2>Welcome to Manga Tur</h2>
+          <p>Your ultimate destination for manga and comics.</p>
+          <a href="#genres" class="btn">Explore Now</a>
+        </div>
+      </section>
+
+      <section id="genres" class="genres">
+        <div class="container">
+          <h2>Genres</h2>
+          <div class="genre-list">
+            <div class="genre">Action</div>
+            <div class="genre">Romance</div>
+            <div class="genre">Fantasy</div>
+            <div class="genre">Horror</div>
+            <div class="genre">Comedy</div>
+            <div class="genre">Adventure</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="popular" class="popular">
+        <div class="container">
+          <h2>Popular Manga</h2>
+          <div class="manga-grid">
+            <div class="manga">
+              <img src="manga1.jpg" alt="Manga 1" />
+              <h3>Manga Title 1</h3>
+            </div>
+            <div class="manga">
+              <img src="manga2.jpg" alt="Manga 2" />
+              <h3>Manga Title 2</h3>
+            </div>
+            <div class="manga">
+              <img src="manga3.jpg" alt="Manga 3" />
+              <h3>Manga Title 3</h3>
+            </div>
+            <div class="manga">
+              <img src="manga4.jpg" alt="Manga 4" />
+              <h3>Manga Title 4</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Manga Tur. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
