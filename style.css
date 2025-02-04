@@ -145,21 +145,17 @@ p {
   font-size: 14px;
   margin: 0 0 20px;
 }
-.button {
-  background-color: #2a2a2a;
+.btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
   border: none;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 10px 0;
-  margin: 10px 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 8px;
   cursor: pointer;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  transition:   0.4s ease-in-out;
 }
-.button i {
-  color: #a78bfa;
-  margin-right: 10px;
+.btn:hover {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
 }
