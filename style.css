@@ -35,7 +35,7 @@ body {
   max-width: 1280px;
   background-color: #000;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 8px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
@@ -50,7 +50,7 @@ body {
 
 .box_2 {
   background-color: #1e1e1e;
-  margin-top: -10px;
+  margin-top: -20px;
   border-radius: 20px;
   grid-column: 9/13;
   grid-row: 1/7;
@@ -84,7 +84,7 @@ body {
   font-size: 12px;
   font-weight: 500;
 }
-.container {
+.containers {
   background-color: #1e1e1e;
   border-radius: 10px;
   padding: 10px;
@@ -151,11 +151,13 @@ p {
   font-weight: bold;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
-  background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  transition:   0.4s ease-in-out;
+  background: linear-gradient(90deg, #d11f96, #74c91f);
+  transition: backround 0.4s ease-in-out;
 }
 .btn:hover {
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  background: linear-gradient(90deg, #abdb1b, #1bdfb2);
+  color: #000;
 }
