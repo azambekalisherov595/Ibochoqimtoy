@@ -1,0 +1,6 @@
+.btn:hover {
+  background: linear-gradient(90deg, #00ccef, #1e3a8a);
+  opacity: 3;
+  transform: scale(1.05);
+  border-radius: 20px;
+}
